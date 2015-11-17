@@ -81,7 +81,7 @@ class LogicalVolume(object):
         if not self.is_cached():
             raise ValueError('LV is of wrong type')
 
-        devpath = self.path
+        devpath = self.lv_dm_path
         s = os.stat(devpath)
         major, minor = os.major(s.st_rdev), os.minor(s.st_rdev)
         mapper = find_device('/dev/mapper', major, minor)
