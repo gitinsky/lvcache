@@ -1,5 +1,6 @@
 import os
 import logging
+import string
 
 from sh import (
     dmsetup,
